@@ -31,7 +31,7 @@ public class SmartViewPager extends LinearLayout {
     public SmartViewPager(Context context, AttributeSet attrs, int defStyle) {
         super(context, attrs);
         initView();
-        getAttrs(attrs);
+        getAttrs(attrs, defStyle);
     }
 
     public void initView() {
