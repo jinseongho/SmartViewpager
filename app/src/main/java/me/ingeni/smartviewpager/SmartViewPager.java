@@ -55,7 +55,6 @@ public class SmartViewPager extends LinearLayout {
     }
 
     private void setTypeArray(TypedArray typedArray) {
-
         int bg_resID = typedArray.getResourceId(R.styleable.SmartViewPager_bg, Color.TRANSPARENT);
         indicatorlayout.setBackgroundResource(bg_resID);
         typedArray.recycle();
