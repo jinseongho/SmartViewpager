@@ -2,6 +2,7 @@ package me.ingeni.smartviewpager;
 
 import android.content.Context;
 import android.content.res.TypedArray;
+import android.graphics.Color;
 import android.support.v4.view.ViewPager;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;
@@ -44,7 +45,6 @@ public class SmartViewPager extends LinearLayout {
 
     private void getAttrs(AttributeSet attrs) {
         TypedArray typedArray = getContext().obtainStyledAttributes(attrs, R.styleable.SmartViewPager);
-
         setTypeArray(typedArray);
     }
 
@@ -55,6 +55,9 @@ public class SmartViewPager extends LinearLayout {
     }
 
     private void setTypeArray(TypedArray typedArray) {
+
+        int bg_resID = typedArray.getResourceId(R.styleable.SmartViewPager_bg, Color.TRANSPARENT);
+        indicatorlayout.setBackgroundResource(bg_resID);
         typedArray.recycle();
     }
 
