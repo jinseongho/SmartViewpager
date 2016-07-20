@@ -20,6 +20,7 @@ public class SmartViewPager extends LinearLayout {
 
     public SmartViewPager(Context context) {
         super(context);
+        
         initView();
     }
 
