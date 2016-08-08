@@ -13,14 +13,14 @@ import android.widget.LinearLayout;
  * Created by jinseongho on 2016. 7. 18..
  */
 
-public class SmartViewPager extends LinearLayout {
+public class SmartViewPager extends LinearLayout implements ViewPager.OnPageChangeListener{
 
     private ViewPager viewPager;
     private LinearLayout indicatorlayout;
 
     public SmartViewPager(Context context) {
         super(context);
-        
+
         initView();
     }
 
@@ -41,6 +41,8 @@ public class SmartViewPager extends LinearLayout {
         View v = mInflater.inflate(R.layout.layout_smart_viewpager, this, false);
         viewPager = (ViewPager) v.findViewById(R.id.smart_view_pager);
         indicatorlayout = (LinearLayout) v.findViewById(R.id.indicator_layout);
+
+        viewPager.addOnPageChangeListener(this);
         addView(v);
     }
 
@@ -61,4 +63,18 @@ public class SmartViewPager extends LinearLayout {
         typedArray.recycle();
     }
 
+    @Override
+    public void onPageScrolled(int position, float positionOffset, int positionOffsetPixels) {
+
+    }
+
+    @Override
+    public void onPageSelected(int position) {
+
+    }
+
+    @Override
+    public void onPageScrollStateChanged(int state) {
+
+    }
 }
